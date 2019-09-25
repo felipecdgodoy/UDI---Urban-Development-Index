@@ -1,7 +1,7 @@
 from math import log, exp
 
 def index_pib(realPIBpercapita):
-    "Returns the index value for PIB. Takes in the value in dollars. I.e. 3451"
+    "Returns the index value for PIB per capita. Takes in the value in dollars. I.e. 3451"
     return 100.0 * ((log(realPIBpercapita) - log(604)) / (log(145894) - log(604)))
 
 def index_unemployement(unemployement_rate):
@@ -47,5 +47,5 @@ def describeCity(cityName, realPIBpercapita, unemployement_rate, literate_rate, 
     print("Index value for Water Access: " + index_accessToCleanWater(water_access_rate))
     print("Index value for Health: " + index_accessToHealth(number_doc_1000_people))
     print("Index value for Life Expectancy: " + index_lifeExpectancy(lifeExpectancy))
-    print("UDI: " + IDU(realPIBpercapita, unemployement_rate, literate_rate, water_access_rate,
+    print("UDI: " + UDI(realPIBpercapita, unemployement_rate, literate_rate, water_access_rate,
             number_doc_1000_people, lifeExpectancy))
